@@ -12,8 +12,10 @@ Set-Alias dcu DockerComposeUpDetached
 Set-Alias dcd DockerComposeDown
 Set-Alias omp oh-my-posh
 Set-Alias http curlie
+Set-Alias azc azure-cost # See https://github.com/mivano/azure-cost-cli
 
 Set-PSReadLineOption -PredictionViewStyle ListView -PromptText '> ', 'X '
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 Import-Module posh-git
